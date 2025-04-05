@@ -9,3 +9,13 @@ registerBtn.addEventListener('click', () => {
 loginBtn.addEventListener('click', () => {
     container.classList.remove('active');
 })
+function loguear() {
+    let User = document.getElementById("usuario").value;
+    let pass = document.getElementById("clave").value;
+    if (User == "Vale" && pass == "123") {
+        window.location = "principal.html";
+    } else {
+        alert("Datos Incorrectos");
+
+    }
+}
