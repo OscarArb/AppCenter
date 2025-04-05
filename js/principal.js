@@ -1,3 +1,16 @@
+const user = JSON.parse(localStorage.getItem('login_success')) || false
+if(!user){
+    window.location.href = 'index.html'
+}
+
+const logout = document.querySelector('#logout')
+
+logout.addEventListener('click', ()=>{
+    alert('Hasta pronto!')
+    localStorage.removeItem('login_success')
+    window.location.href = 'index.html'
+})
+//
 const allSideMenu = document.querySelectorAll('#sidebar .side-menu.top li a');
 
 allSideMenu.forEach(item => {
@@ -110,3 +123,4 @@ window.addEventListener('click', function (e) {
         menu.style.display = 'none';
       });
     });
+
